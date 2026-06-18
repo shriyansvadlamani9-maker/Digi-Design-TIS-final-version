@@ -31,6 +31,7 @@ nav ul {
 
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 
   margin: 0;
   padding: 0;
@@ -43,21 +44,17 @@ nav ul {
 .logo {
   height: clamp(45px, 5vw, 70px);
   width: auto;
-
   display: block;
 }
 
 nav a {
   color: #d8b24a;
-
   text-decoration: none;
 
   font-size: clamp(1rem, 2vw, 2rem);
-
   font-weight: bold;
 
   padding: 10px 20px;
-
   display: block;
 
   transition: 0.3s;
