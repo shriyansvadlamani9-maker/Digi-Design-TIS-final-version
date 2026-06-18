@@ -207,4 +207,22 @@ li a:hover {
 .owner-card input:checked ~ .owner-info {
   max-height: 700px;
 }
+@media (max-width:768px){
 
+    nav{
+        padding:10px 15px;
+    }
+
+    .logo{
+        height:55px;
+    }
+
+    nav ul{
+        gap:10px;
+    }
+
+    .input{
+        height:55px;
+        font-size:1rem;
+    }
+}
