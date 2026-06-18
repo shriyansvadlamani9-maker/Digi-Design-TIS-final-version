@@ -1,0 +1,210 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+
+  background-image:
+    linear-gradient(
+      rgba(0,0,0,0.45),
+      rgba(0,0,0,0.45)
+    ),
+    url("https://files.catbox.moe/d0cqi6.png");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+nav {
+  background: rgba(15,12,8,0.55);
+
+  backdrop-filter: blur(4px);
+
+  overflow: auto;
+
+  padding: 10px 20px;
+}
+
+ul {
+  list-style-type: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  float: right;
+}
+
+.logo-item {
+  float: left;
+}
+
+.logo {
+  height: 60px;
+
+  display: block;
+}
+
+li a {
+  color: #d8b24a;
+
+  text-align: center;
+
+  padding: 10px 20px;
+
+  text-decoration: none;
+
+  font-size: 30px;
+
+  font-weight: bold;
+
+  display: block;
+
+  transition: 0.3s;
+}
+
+li a:hover {
+  color: #ffcc53;
+}
+
+.about-container {
+  width: 85%;
+
+  max-width: 1200px;
+
+  margin: 40px auto;
+
+  background: rgba(20,14,9,0.75);
+
+  padding: 50px;
+
+  border-radius: 15px;
+
+  box-shadow:
+    0 0 40px rgba(0,0,0,0.5);
+}
+
+.owners-title {
+  text-align: left;
+
+  color: #f4d06f;
+
+  font-family: "Cinzel", serif;
+
+  font-size: 4.5rem;
+
+  letter-spacing: 4px;
+
+  margin-bottom: 60px;
+
+  padding-left: 20px;
+
+  border-left: 6px solid #d8b24a;
+
+  text-shadow:
+    0 2px 5px rgba(0,0,0,0.8);
+}
+
+.owners-grid {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 40px;
+}
+
+.owner-card input {
+  display: none;
+}
+
+.owner-card label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 40px;
+
+  cursor: pointer;
+
+  background: rgba(15,12,8,0.75);
+
+  backdrop-filter: blur(8px);
+
+  border: 2px solid rgba(216,178,74,0.35);
+
+  border-radius: 15px;
+
+  padding: 30px;
+
+  transition: 0.3s ease;
+}
+
+.owner-card label:hover {
+  transform: translateY(-4px);
+
+  border-color: #d8b24a;
+
+  box-shadow:
+    0 10px 25px rgba(216,178,74,0.15);
+}
+
+.owner-card img {
+  width: 200px;
+
+  height: 260px;
+
+  object-fit: cover;
+
+  border: 3px solid #d8b24a;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 0 20px rgba(216,178,74,0.25);
+}
+
+.owner-card h2 {
+  color: #f4d06f;
+
+  font-size: 2.5rem;
+
+  margin: 0;
+}
+
+.owner-info {
+  max-height: 0;
+
+  overflow: hidden;
+
+  transition: 0.5s ease;
+
+  background: rgba(15,12,8,0.85);
+
+  border: 2px solid rgba(216,178,74,0.25);
+
+  border-radius: 15px;
+
+  margin-top: 15px;
+}
+
+.owner-info p {
+  color: #f5f0e6;
+
+  font-size: 1.15rem;
+
+  line-height: 1.8;
+
+  padding: 30px;
+
+  text-align: left;
+
+  white-space: pre-line;
+}
+
+.owner-card input:checked ~ .owner-info {
+  max-height: 700px;
+}
+
