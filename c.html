@@ -1,0 +1,177 @@
+<link rel="stylesheet" type="text/css" href="c.css" />
+<html>
+<head>
+<title>Cart</title>
+</head>
+<head>
+<meta charset="UTF-8">
+<meta name="handheldfriendly" content="true">
+  	<meta name="mobileoptimized" content="240">
+  	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+<body>
+
+<div class="hero">
+<nav>
+<ul>
+<li class="logo-item"><img src="https://files.catbox.moe/hqwrbn.png" class="logo"></li>
+<li><a href="cart.html">🛒</a></li>
+<li><a href="a.html">About Us</a></li>
+<li><a href="p.html">Products</a></li>
+<li><a href="index.html">Home</a></li>
+</ul>
+</nav>
+</div>
+
+<div class="CartContainer">
+
+<div class="Header">
+<h3 class="Heading">Shopping Cart</h3>
+<h5 class="Action">OUI R Store</h5>
+</div>
+
+<div class="Cart-Items">
+<div class="image-box">
+<img src="https://files.catbox.moe/vxbe7p.png" class="product-img">
+</div>
+
+<div class="about">
+<h1 class="title">OUI R</h1>
+<h3 class="subtitle">Model 2</h3>
+</div>
+
+<div class="counter">
+<button class="btn minus">-</button>
+<div class="count">1</div>
+<button class="btn plus">+</button>
+</div>
+
+<div class="prices">
+<div class="amount" data-price="99">99¢</div>
+</div>
+</div>
+
+<div class="Cart-Items">
+<div class="image-box">
+<img src="https://files.catbox.moe/2r0yx6.png" class="product-img">
+</div>
+
+<div class="about">
+<h1 class="title">ODM Gear</h1>
+<h3 class="subtitle">Model 3</h3>
+</div>
+
+<div class="counter">
+<button class="btn minus">-</button>
+<div class="count">1</div>
+<button class="btn plus">+</button>
+</div>
+
+<div class="prices">
+<div class="amount" data-price="100">100¢</div>
+</div>
+</div>
+
+<div class="Cart-Items">
+<div class="image-box">
+<img src="https://files.catbox.moe/n48gdo.png" class="product-img">
+</div>
+
+<div class="about">
+<h1 class="title">OUI R</h1>
+<h3 class="subtitle">Model 1</h3>
+</div>
+
+<div class="counter">
+<button class="btn minus">-</button>
+<div class="count">1</div>
+<button class="btn plus">+</button>
+</div>
+
+<div class="prices">
+<div class="amount" data-price="98">98¢</div>
+</div>
+</div>
+
+<hr>
+
+<div class="checkout">
+<div class="total">
+<div>
+<div class="Subtotal">Total</div>
+<div class="items">3 items</div>
+</div>
+<div class="total-amount">297¢</div>
+</div>
+
+<button class="button">Checkout</button>
+</div>
+
+</div>
+
+<script>
+
+const plusButtons=document.querySelectorAll(".plus");
+const minusButtons=document.querySelectorAll(".minus");
+
+function updateTotal(){
+
+let total=0;
+let items=0;
+
+document.querySelectorAll(".Cart-Items").forEach(item=>{
+
+const count=parseInt(item.querySelector(".count").textContent);
+const price=parseInt(item.querySelector(".amount").dataset.price);
+
+total+=count*price;
+items+=count;
+
+});
+
+document.querySelector(".total-amount").textContent=total+"¢";
+document.querySelector(".items").textContent=items+" items";
+
+}
+
+plusButtons.forEach(btn=>{
+
+btn.addEventListener("click",()=>{
+
+const count=btn.parentElement.querySelector(".count");
+
+count.textContent=parseInt(count.textContent)+1;
+
+updateTotal();
+
+});
+
+});
+
+minusButtons.forEach(btn=>{
+
+btn.addEventListener("click",()=>{
+
+const count=btn.parentElement.querySelector(".count");
+
+let value=parseInt(count.textContent);
+
+if(value>0){
+
+count.textContent=value-1;
+
+updateTotal();
+
+}
+
+});
+
+});
+
+updateTotal();
+
+</script>
+
+</body>
+</html>
+```
