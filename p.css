@@ -1,0 +1,147 @@
+html,
+body {
+margin: 0;
+padding: 0;
+min-height: 100%;
+
+
+background-image:
+linear-gradient(
+rgba(0,0,0,0.35),
+rgba(0,0,0,0.35)
+),
+url("https://files.catbox.moe/yb9pdr.png");
+
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+}
+
+nav {
+background: rgba(15,12,8,0.55);
+backdrop-filter: blur(4px);
+overflow: auto;
+padding: 10px 20px;
+}
+
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+
+li {
+float: right;
+}
+
+.logo-item {
+float: left;
+}
+
+.logo {
+height: 60px;
+display: block;
+}
+
+li a {
+color: #d8b24a;
+text-align: center;
+padding: 10px 20px;
+text-decoration: none;
+font-size: 30px;
+font-weight: bold;
+display: block;
+transition: 0.3s;
+}
+
+li a:hover {
+color: #ffcc53;
+}
+
+.products-container {
+width: 90%;
+max-width: 1200px;
+margin: 130px auto 50px auto;
+}
+
+.section-title {
+text-align: center;
+color: #f4d06f;
+font-size: 4rem;
+letter-spacing: 3px;
+margin: 50px 0 30px 0;
+text-shadow: 0 0 15px rgba(244,208,111,0.35);
+}
+
+.product {
+display: flex;
+align-items: center;
+gap: 30px;
+
+margin-bottom: 40px;
+padding: 30px;
+
+background: rgba(15,12,8,0.72);
+
+backdrop-filter: blur(6px);
+
+border: 2px solid rgba(216,178,74,0.25);
+
+border-radius: 18px;
+
+transition: 0.3s ease;
+}
+
+.product:hover {
+transform: translateY(-4px);
+
+border-color: #d8b24a;
+
+box-shadow:
+0 10px 25px rgba(216,178,74,0.18);
+}
+
+.product img {
+height: 220px;
+width: auto;
+}
+
+.des {
+color: #f5f0e6;
+}
+
+.des h2 {
+color: #f4d06f;
+font-size: 2rem;
+margin-bottom: 12px;
+}
+
+.des p {
+font-size: 1.1rem;
+line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+
+.product {
+flex-direction: column;
+text-align: center;
+}
+
+.product img {
+height: 180px;
+}
+
+.section-title {
+font-size: 2.5rem;
+}
+
+li a {
+font-size: 18px;
+padding: 8px;
+}
+
+.logo {
+height: 45px;
+}
